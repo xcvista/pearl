@@ -47,6 +47,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="LsF-hc-HjN">
+                                <rect key="frame" x="274" y="523" width="29" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveImage:" destination="2" eventType="touchUpInside" id="S7e-9H-iC2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <connections>
@@ -57,6 +72,7 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="activityIndicator" destination="xqW-NT-rUb" id="FJb-HP-KKx"/>
+                        <outlet property="addButton" destination="LsF-hc-HjN" id="BcB-h7-kaf"/>
                         <outlet property="crisisLabel" destination="4wj-d2-xOl" id="7vX-Fx-JwF"/>
                         <outlet property="imageView" destination="bAq-mX-Iiu" id="aEt-u6-g6m"/>
                         <outlet property="proceedButton" destination="pa3-FQ-owb" id="sMV-7m-0m2"/>
@@ -140,30 +156,6 @@
             </objects>
             <point key="canvasLocation" x="1900" y="94"/>
         </scene>
-        <!--Table View Controller - Books-->
-        <scene sceneID="qfb-Af-7CD">
-            <objects>
-                <tableViewController id="vou-44-HOq" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="LFi-AW-q4x">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <connections>
-                            <outlet property="dataSource" destination="vou-44-HOq" id="L8f-CH-gmc"/>
-                            <outlet property="delegate" destination="vou-44-HOq" id="u6L-5S-7dC"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Books" id="Jrx-GC-K2V">
-                        <barButtonItem key="leftBarButtonItem" title="Home" id="qRx-kM-12S">
-                            <connections>
-                                <action selector="close:" destination="vou-44-HOq" id="N45-rk-W9S"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mSg-yL-Mvu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2426" y="780"/>
-        </scene>
         <!--Navigation Controller - Books-->
         <scene sceneID="tvu-ct-7ka">
             <objects>
@@ -176,12 +168,48 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="vou-44-HOq" kind="relationship" relationship="rootViewController" id="2NF-IC-o7k"/>
+                        <segue destination="cci-Ev-j3R" kind="relationship" relationship="rootViewController" id="pJY-sv-ExK"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o5M-o5-BR2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1900" y="780"/>
+        </scene>
+        <!--Table View Controller - Books-->
+        <scene sceneID="f7p-6F-8UE">
+            <objects>
+                <tableViewController id="cci-Ev-j3R" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="zd0-Ka-mMm">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="LbZ-jp-gMi">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cci-Ev-j3R" id="71n-pM-kko"/>
+                            <outlet property="delegate" destination="cci-Ev-j3R" id="P6w-KE-QCc"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Books" id="1bx-M5-k0u">
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="Ocq-Ci-IVl">
+                            <connections>
+                                <action selector="close:" destination="cci-Ev-j3R" id="GiW-nJ-NgF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="24r-jM-Kly" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2426" y="780"/>
         </scene>
         <!--Collection View Controller - Picture Gallery-->
         <scene sceneID="50L-JF-3wP">
@@ -258,7 +286,13 @@
                             <outlet property="delegate" destination="xrY-n5-9ha" id="u64-Sr-4zy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="News Headlines" id="4He-2w-RT1"/>
+                    <navigationItem key="navigationItem" title="News Headlines" id="4He-2w-RT1">
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="tcj-5M-1kZ">
+                            <connections>
+                                <action selector="close:" destination="xrY-n5-9ha" id="03O-yp-DSw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5z9-xu-WGG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -307,7 +341,13 @@
                             <outlet property="delegate" destination="ops-Bf-0i5" id="nkj-u9-oCA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Activities" id="sE2-Zd-8Ze"/>
+                    <navigationItem key="navigationItem" title="Activities" id="sE2-Zd-8Ze">
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="n8o-KQ-1rV">
+                            <connections>
+                                <action selector="close:" destination="ops-Bf-0i5" id="X7e-rM-rw5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHE-hG-G92" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -356,7 +396,13 @@
                             <outlet property="delegate" destination="RBV-9P-taJ" id="ln4-1X-N4m"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Preferences" id="tVA-hL-28R"/>
+                    <navigationItem key="navigationItem" title="Preferences" id="tVA-hL-28R">
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="Ebd-Q2-0uG">
+                            <connections>
+                                <action selector="close:" destination="RBV-9P-taJ" id="sTq-kk-wve"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q4G-td-bYD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -382,6 +428,36 @@
             <point key="canvasLocation" x="1900" y="3596"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="PInitialViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PInitialViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="hideStuff:"/>
+                <relationship kind="action" name="saveImage:"/>
+                <relationship kind="action" name="showStuff:"/>
+                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="addButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="crisisLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="proceedButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="UICollectionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
+        </class>
+        <class className="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="close:"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

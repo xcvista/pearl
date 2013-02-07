@@ -16,12 +16,14 @@
 @property (weak) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak) IBOutlet UIButton *proceedButton;
 @property (weak) IBOutlet UILabel *crisisLabel;
+@property (weak) IBOutlet UIButton *addButton;
 @property NSDictionary *crisis;
 @property BOOL animating;
 @property BOOL doneLoading;
 
 - (IBAction)hideStuff:(id)sender;
 - (IBAction)showStuff:(id)sender;
+- (IBAction)saveImage:(id)sender;
 
 @end
 
@@ -99,6 +101,7 @@
                             self.proceedButton.alpha = 1;
                         if (self.crisis[@"show"])
                             self.crisisLabel.alpha = 1;
+                        self.addButton.alpha = 1;
                     }
                                      completion:^(BOOL finished)
                     {
@@ -157,6 +160,11 @@
                  self.animating = NO;
          }];
     }
+}
+
+- (void)saveImage:(id)sender
+{
+    UIImageWriteToSavedPhotosAlbum(self.imageView.image, nil, nil, NULL);
 }
 
 - (void)didReceiveMemoryWarning
