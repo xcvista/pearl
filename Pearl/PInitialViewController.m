@@ -13,6 +13,14 @@
 
 @property (weak) IBOutlet UIImageView *imageView;
 @property (weak) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak) IBOutlet UIButton *proceedButton;
+@property (weak) IBOutlet UILabel *crisisLabel;
+@property NSDictionary *crisis;
+@property BOOL animating;
+@property BOOL doneLoading;
+
+- (IBAction)hideStuff:(id)sender;
+- (IBAction)showStuff:(id)sender;
 
 @end
 
@@ -61,11 +69,31 @@
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^
             {
                 // Do something
-                sleep(1);
+                if (!self.crisis)
+                    self.crisis = [NSDictionary dictionaryWithContentsOfURL:[NSURL URLWithString:@"http://www.maxius.tk/pearl/crisis.plist"]];
+                if (!self.crisis)
+                    self.crisis = @{@"show": @YES,
+                               @"text": @"Max 有难！"};
                 
                 dispatch_async(dispatch_get_main_queue(), ^
                 {
-                    [self performSegueWithIdentifier:@"proceed" sender:self];
+                    self.proceedButton.enabled = YES;
+                    if (self.crisis[@"show"])
+                        self.crisisLabel.text = self.crisis[@"text"];
+                    self.doneLoading = YES;
+                    self.animating = NO;
+                    [UIView animateWithDuration:0.5 animations:^
+                    {
+                        self.activityIndicator.alpha = 0;
+                        self.proceedButton.alpha = 1;
+                        if (self.crisis[@"show"])
+                            self.crisisLabel.alpha = 1;
+                    }
+                                     completion:^(BOOL finished)
+                    {
+                        if (finished)
+                            self.animating = NO;
+                    }];
                 });
             });
         }
@@ -76,6 +104,46 @@
 {
     [super viewWillDisappear:animated];
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
+}
+
+- (void)hideStuff:(id)sender
+{
+    if (self.doneLoading && !self.animating)
+    {
+        self.animating = YES;
+        [UIView animateWithDuration:0.5 animations:^
+         {
+             self.activityIndicator.alpha = 1;
+             self.proceedButton.alpha = 0;
+             if (self.crisis[@"show"])
+                 self.crisisLabel.alpha = 0;
+         }
+                         completion:^(BOOL finished)
+         {
+             if (finished)
+                 self.animating = NO;
+         }];
+    }
+}
+
+- (void)showStuff:(id)sender
+{
+    if (self.doneLoading && !self.animating)
+    {
+        self.animating = YES; 
+        [UIView animateWithDuration:0.5 animations:^
+         {
+             self.activityIndicator.alpha = 0;
+             self.proceedButton.alpha = 1;
+             if (self.crisis[@"show"])
+                 self.crisisLabel.alpha = 1;
+         }
+                         completion:^(BOOL finished)
+         {
+             if (finished)
+                 self.animating = NO;
+         }];
+    }
 }
 
 - (void)didReceiveMemoryWarning

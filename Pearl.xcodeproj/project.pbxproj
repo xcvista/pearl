@@ -30,6 +30,7 @@
 		1D2697DA16C24E580092EC2D /* PInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2697D916C24E580092EC2D /* PInitialViewController.m */; };
 		1D2697DE16C2506D0092EC2D /* README in Resources */ = {isa = PBXBuildFile; fileRef = 1D2697DD16C2506D0092EC2D /* README */; };
 		1D2697E116C251840092EC2D /* UIDevice+Resolutions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2697E016C251840092EC2D /* UIDevice+Resolutions.m */; };
+		1D2697E416C30C080092EC2D /* PMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2697E316C30C080092EC2D /* PMainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,8 @@
 		1D2697DD16C2506D0092EC2D /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		1D2697DF16C251840092EC2D /* UIDevice+Resolutions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Resolutions.h"; sourceTree = "<group>"; };
 		1D2697E016C251840092EC2D /* UIDevice+Resolutions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Resolutions.m"; sourceTree = "<group>"; };
+		1D2697E216C30C080092EC2D /* PMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMainViewController.h; sourceTree = "<group>"; };
+		1D2697E316C30C080092EC2D /* PMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				1D1D6D6816C24B390093E239 /* MainStoryboard.storyboard */,
 				1D2697D816C24E580092EC2D /* PInitialViewController.h */,
 				1D2697D916C24E580092EC2D /* PInitialViewController.m */,
+				1D2697E216C30C080092EC2D /* PMainViewController.h */,
+				1D2697E316C30C080092EC2D /* PMainViewController.m */,
 				1D2697DF16C251840092EC2D /* UIDevice+Resolutions.h */,
 				1D2697E016C251840092EC2D /* UIDevice+Resolutions.m */,
 				1D1D6D5716C24B390093E239 /* Supporting Files */,
@@ -239,6 +244,7 @@
 				1D1D6D6116C24B390093E239 /* PAppDelegate.m in Sources */,
 				1D2697DA16C24E580092EC2D /* PInitialViewController.m in Sources */,
 				1D2697E116C251840092EC2D /* UIDevice+Resolutions.m in Sources */,
+				1D2697E416C30C080092EC2D /* PMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
