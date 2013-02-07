@@ -1,5 +1,5 @@
 //
-//  PMainViewController.h
+//  UIViewController+Exit.h
 //  Pearl
 //
 //  Created by Maxthon Chan on 13-2-7.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PMainViewController : UICollectionViewController
+@interface UIViewController (Exit)
 
 @end
