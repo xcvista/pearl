@@ -125,13 +125,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="About Pearl" id="ygJ-aF-ZN3">
-                        <barButtonItem key="leftBarButtonItem" title="Home" id="gdZ-cJ-ZFK">
-                            <connections>
-                                <action selector="close:" destination="daf-um-Y51" id="SVG-LT-pkp"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="About Pearl" id="ygJ-aF-ZN3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yxg-xk-O2m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -199,13 +193,7 @@
                             <outlet property="delegate" destination="cci-Ev-j3R" id="P6w-KE-QCc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Books" id="1bx-M5-k0u">
-                        <barButtonItem key="leftBarButtonItem" title="Home" id="Ocq-Ci-IVl">
-                            <connections>
-                                <action selector="close:" destination="cci-Ev-j3R" id="GiW-nJ-NgF"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Books" id="1bx-M5-k0u"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="24r-jM-Kly" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -231,13 +219,7 @@
                             <outlet property="delegate" destination="QlP-gq-5on" id="vTy-rv-XnX"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Picture Gallery" id="vph-Tb-UEd">
-                        <barButtonItem key="leftBarButtonItem" title="Home" id="k6C-Cn-chp">
-                            <connections>
-                                <action selector="close:" destination="QlP-gq-5on" id="KKK-3k-k6R"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Picture Gallery" id="vph-Tb-UEd"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QSn-Ww-5Gi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -286,13 +268,7 @@
                             <outlet property="delegate" destination="xrY-n5-9ha" id="u64-Sr-4zy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="News Headlines" id="4He-2w-RT1">
-                        <barButtonItem key="leftBarButtonItem" title="Home" id="tcj-5M-1kZ">
-                            <connections>
-                                <action selector="close:" destination="xrY-n5-9ha" id="03O-yp-DSw"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="News Headlines" id="4He-2w-RT1"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5z9-xu-WGG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -341,13 +317,7 @@
                             <outlet property="delegate" destination="ops-Bf-0i5" id="nkj-u9-oCA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Activities" id="sE2-Zd-8Ze">
-                        <barButtonItem key="leftBarButtonItem" title="Home" id="n8o-KQ-1rV">
-                            <connections>
-                                <action selector="close:" destination="ops-Bf-0i5" id="X7e-rM-rw5"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Activities" id="sE2-Zd-8Ze"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHE-hG-G92" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -396,13 +366,7 @@
                             <outlet property="delegate" destination="RBV-9P-taJ" id="ln4-1X-N4m"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Preferences" id="tVA-hL-28R">
-                        <barButtonItem key="leftBarButtonItem" title="Home" id="Ebd-Q2-0uG">
-                            <connections>
-                                <action selector="close:" destination="RBV-9P-taJ" id="sTq-kk-wve"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Preferences" id="tVA-hL-28R"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q4G-td-bYD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
