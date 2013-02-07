@@ -30,7 +30,10 @@
 		1D2697DA16C24E580092EC2D /* PInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2697D916C24E580092EC2D /* PInitialViewController.m */; };
 		1D2697DE16C2506D0092EC2D /* README in Resources */ = {isa = PBXBuildFile; fileRef = 1D2697DD16C2506D0092EC2D /* README */; };
 		1D2697E116C251840092EC2D /* UIDevice+Resolutions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2697E016C251840092EC2D /* UIDevice+Resolutions.m */; };
-		1D2697E416C30C080092EC2D /* PMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2697E316C30C080092EC2D /* PMainViewController.m */; };
+		1D2697E716C39E730092EC2D /* UIViewController+Exit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2697E616C39E730092EC2D /* UIViewController+Exit.m */; };
+		1D26981016C4230A0092EC2D /* UIImage+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D26980F16C4230A0092EC2D /* UIImage+Cache.m */; };
+		1D26981516C425150092EC2D /* NSData+Gzip.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D26981416C425150092EC2D /* NSData+Gzip.m */; };
+		1D26981716C4282B0092EC2D /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D26981616C4282B0092EC2D /* libz.1.2.5.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,8 +68,14 @@
 		1D2697DD16C2506D0092EC2D /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		1D2697DF16C251840092EC2D /* UIDevice+Resolutions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Resolutions.h"; sourceTree = "<group>"; };
 		1D2697E016C251840092EC2D /* UIDevice+Resolutions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Resolutions.m"; sourceTree = "<group>"; };
-		1D2697E216C30C080092EC2D /* PMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMainViewController.h; sourceTree = "<group>"; };
-		1D2697E316C30C080092EC2D /* PMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PMainViewController.m; sourceTree = "<group>"; };
+		1D2697E516C39E730092EC2D /* UIViewController+Exit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Exit.h"; sourceTree = "<group>"; };
+		1D2697E616C39E730092EC2D /* UIViewController+Exit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Exit.m"; sourceTree = "<group>"; };
+		1D26980E16C4230A0092EC2D /* UIImage+Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Cache.h"; sourceTree = "<group>"; };
+		1D26980F16C4230A0092EC2D /* UIImage+Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Cache.m"; sourceTree = "<group>"; };
+		1D26981116C424F90092EC2D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		1D26981316C425150092EC2D /* NSData+Gzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Gzip.h"; sourceTree = "<group>"; };
+		1D26981416C425150092EC2D /* NSData+Gzip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Gzip.m"; sourceTree = "<group>"; };
+		1D26981616C4282B0092EC2D /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D26981716C4282B0092EC2D /* libz.1.2.5.dylib in Frameworks */,
 				1D1D6D5116C24B390093E239 /* UIKit.framework in Frameworks */,
 				1D1D6D5316C24B390093E239 /* Foundation.framework in Frameworks */,
 				1D1D6D5516C24B390093E239 /* CoreGraphics.framework in Frameworks */,
@@ -105,6 +115,8 @@
 		1D1D6D4F16C24B390093E239 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D26981616C4282B0092EC2D /* libz.1.2.5.dylib */,
+				1D26981116C424F90092EC2D /* libz.dylib */,
 				1D1D6D5016C24B390093E239 /* UIKit.framework */,
 				1D1D6D5216C24B390093E239 /* Foundation.framework */,
 				1D1D6D5416C24B390093E239 /* CoreGraphics.framework */,
@@ -120,10 +132,14 @@
 				1D1D6D6816C24B390093E239 /* MainStoryboard.storyboard */,
 				1D2697D816C24E580092EC2D /* PInitialViewController.h */,
 				1D2697D916C24E580092EC2D /* PInitialViewController.m */,
-				1D2697E216C30C080092EC2D /* PMainViewController.h */,
-				1D2697E316C30C080092EC2D /* PMainViewController.m */,
 				1D2697DF16C251840092EC2D /* UIDevice+Resolutions.h */,
 				1D2697E016C251840092EC2D /* UIDevice+Resolutions.m */,
+				1D2697E516C39E730092EC2D /* UIViewController+Exit.h */,
+				1D2697E616C39E730092EC2D /* UIViewController+Exit.m */,
+				1D26980E16C4230A0092EC2D /* UIImage+Cache.h */,
+				1D26980F16C4230A0092EC2D /* UIImage+Cache.m */,
+				1D26981316C425150092EC2D /* NSData+Gzip.h */,
+				1D26981416C425150092EC2D /* NSData+Gzip.m */,
 				1D1D6D5716C24B390093E239 /* Supporting Files */,
 			);
 			path = Pearl;
@@ -244,7 +260,9 @@
 				1D1D6D6116C24B390093E239 /* PAppDelegate.m in Sources */,
 				1D2697DA16C24E580092EC2D /* PInitialViewController.m in Sources */,
 				1D2697E116C251840092EC2D /* UIDevice+Resolutions.m in Sources */,
-				1D2697E416C30C080092EC2D /* PMainViewController.m in Sources */,
+				1D2697E716C39E730092EC2D /* UIViewController+Exit.m in Sources */,
+				1D26981016C4230A0092EC2D /* UIImage+Cache.m in Sources */,
+				1D26981516C425150092EC2D /* NSData+Gzip.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

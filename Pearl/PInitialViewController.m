@@ -8,6 +8,7 @@
 
 #import "PInitialViewController.h"
 #import "UIDevice+Resolutions.h"
+#import "NSData+Gzip.h"
 
 @interface PInitialViewController ()
 
@@ -70,14 +71,23 @@
             {
                 // Do something
                 if (!self.crisis)
-                    self.crisis = [NSDictionary dictionaryWithContentsOfURL:[NSURL URLWithString:@"http://www.maxius.tk/pearl/crisis.plist"]];
+                {
+                    NSData *gzippedData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://www.maxius.tk/pearl/crisis.pgz"]];
+                    NSData *uncompressedData = [gzippedData gzipInflate];
+                    if ([uncompressedData length])
+                        self.crisis = [NSPropertyListSerialization propertyListWithData:uncompressedData
+                                                                                options:0
+                                                                                 format:NULL
+                                                                                  error:NULL];
+                }
                 if (!self.crisis)
                     self.crisis = @{@"show": @YES,
                                @"text": @"Max 有难！"};
                 
                 dispatch_async(dispatch_get_main_queue(), ^
                 {
-                    self.proceedButton.enabled = YES;
+                    if (![self.crisis[@"closed"] boolValue])
+                        self.proceedButton.enabled = YES;
                     if (self.crisis[@"show"])
                         self.crisisLabel.text = self.crisis[@"text"];
                     self.doneLoading = YES;
@@ -85,7 +95,8 @@
                     [UIView animateWithDuration:0.5 animations:^
                     {
                         self.activityIndicator.alpha = 0;
-                        self.proceedButton.alpha = 1;
+                        if (![self.crisis[@"closed"] boolValue])
+                            self.proceedButton.alpha = 1;
                         if (self.crisis[@"show"])
                             self.crisisLabel.alpha = 1;
                     }
@@ -114,8 +125,9 @@
         [UIView animateWithDuration:0.5 animations:^
          {
              self.activityIndicator.alpha = 1;
-             self.proceedButton.alpha = 0;
-             if (self.crisis[@"show"])
+             if (![self.crisis[@"closed"] boolValue])
+                 self.proceedButton.alpha = 0;
+             if ([self.crisis[@"show"] boolValue])
                  self.crisisLabel.alpha = 0;
          }
                          completion:^(BOOL finished)
@@ -134,7 +146,8 @@
         [UIView animateWithDuration:0.5 animations:^
          {
              self.activityIndicator.alpha = 0;
-             self.proceedButton.alpha = 1;
+             if (![self.crisis[@"closed"] boolValue])
+                 self.proceedButton.alpha = 1;
              if (self.crisis[@"show"])
                  self.crisisLabel.alpha = 1;
          }

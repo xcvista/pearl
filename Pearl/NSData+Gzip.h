@@ -10,4 +10,7 @@
 
 @interface NSData (Gzip)
 
+- (NSData *) gzipInflate;
+- (NSData *) gzipDeflate;
+
 @end

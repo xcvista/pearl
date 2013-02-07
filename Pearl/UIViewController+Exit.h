@@ -10,4 +10,6 @@
 
 @interface UIViewController (Exit)
 
+- (IBAction)close:(id)sender;
+
 @end

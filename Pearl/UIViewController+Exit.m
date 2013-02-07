@@ -10,4 +10,10 @@
 
 @implementation UIViewController (Exit)
 
+- (void)close:(id)sender
+{
+    [self dismissViewControllerAnimated:YES
+                             completion:nil];
+}
+
 @end
