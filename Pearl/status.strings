@@ -1,0 +1,11 @@
+/* 
+  status.strings
+  Pearl
+
+  Created by Maxthon Chan on 13-2-19.
+  Copyright (c) 2013年 Maxthon Chan. All rights reserved.
+*/
+
+"tk.maxius.pearl.cache-dumped" = "缓存已清除。";
+"tk.maxius.pearl.load-failed" = "加载失败。";
+"tk.maxius.pearl.loading" = "正在加载……";

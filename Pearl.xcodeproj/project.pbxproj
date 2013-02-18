@@ -34,6 +34,20 @@
 		1D26981016C4230A0092EC2D /* UIImage+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D26980F16C4230A0092EC2D /* UIImage+Cache.m */; };
 		1D26981516C425150092EC2D /* NSData+Gzip.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D26981416C425150092EC2D /* NSData+Gzip.m */; };
 		1D26981716C4282B0092EC2D /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D26981616C4282B0092EC2D /* libz.1.2.5.dylib */; };
+		1DC69AA616D0A9DD008B4976 /* PWorksListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC69AA516D0A9DD008B4976 /* PWorksListViewController.m */; };
+		1DC69AA916D0AA5B008B4976 /* NSData+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC69AA816D0AA5B008B4976 /* NSData+Cache.m */; };
+		1DC69AAD16D2AE7D008B4976 /* PDocumentPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC69AAC16D2AE7D008B4976 /* PDocumentPreviewViewController.m */; };
+		1DC69AB016D2B609008B4976 /* MainStoryboard~iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DC69AB216D2B609008B4976 /* MainStoryboard~iPad.storyboard */; };
+		1DC69AB616D2C36B008B4976 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = 1DC69AB816D2C36B008B4976 /* about.html */; };
+		1DC69ABA16D2C3A5008B4976 /* pearl-id.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1DC69AB916D2C3A5008B4976 /* pearl-id.jpeg */; };
+		1DC69ABD16D2CBBA008B4976 /* PAboutPearlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC69ABC16D2CBBA008B4976 /* PAboutPearlViewController.m */; };
+		1DC69AC416D2D517008B4976 /* pictures.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC69AC216D2D517008B4976 /* pictures.png */; };
+		1DC69AC516D2D517008B4976 /* pictures@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC69AC316D2D517008B4976 /* pictures@2x.png */; };
+		1DC69AC816D2D5AC008B4976 /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC69AC616D2D5AC008B4976 /* about.png */; };
+		1DC69AC916D2D5AC008B4976 /* about@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC69AC716D2D5AC008B4976 /* about@2x.png */; };
+		1DC69ACC16D2D893008B4976 /* PPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC69ACB16D2D892008B4976 /* PPreferencesViewController.m */; };
+		1DC69ACE16D2D9AF008B4976 /* ui.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DC69ACD16D2D9AF008B4976 /* ui.strings */; };
+		1DC69AD016D2D9CB008B4976 /* status.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DC69ACF16D2D9CB008B4976 /* status.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,12 +56,10 @@
 		1D1D6D5216C24B390093E239 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D1D6D5416C24B390093E239 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1D1D6D5816C24B390093E239 /* Pearl-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pearl-Info.plist"; sourceTree = "<group>"; };
-		1D1D6D5A16C24B390093E239 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D1D6D5C16C24B390093E239 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1D1D6D5E16C24B390093E239 /* Pearl-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pearl-Prefix.pch"; sourceTree = "<group>"; };
 		1D1D6D5F16C24B390093E239 /* PAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAppDelegate.h; sourceTree = "<group>"; };
 		1D1D6D6016C24B390093E239 /* PAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAppDelegate.m; sourceTree = "<group>"; };
-		1D1D6D6916C24B390093E239 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		1D1D6D7416C24BC60093E239 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		1D1D6D7516C24BC60093E239 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		1D1D6D7616C24BC60093E239 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -72,10 +84,30 @@
 		1D2697E616C39E730092EC2D /* UIViewController+Exit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Exit.m"; sourceTree = "<group>"; };
 		1D26980E16C4230A0092EC2D /* UIImage+Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Cache.h"; sourceTree = "<group>"; };
 		1D26980F16C4230A0092EC2D /* UIImage+Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Cache.m"; sourceTree = "<group>"; };
-		1D26981116C424F90092EC2D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		1D26981316C425150092EC2D /* NSData+Gzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Gzip.h"; sourceTree = "<group>"; };
 		1D26981416C425150092EC2D /* NSData+Gzip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Gzip.m"; sourceTree = "<group>"; };
 		1D26981616C4282B0092EC2D /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		1DB9563C16CBB25800E9C940 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
+		1DC69AA416D0A9DD008B4976 /* PWorksListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PWorksListViewController.h; sourceTree = "<group>"; };
+		1DC69AA516D0A9DD008B4976 /* PWorksListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PWorksListViewController.m; sourceTree = "<group>"; };
+		1DC69AA716D0AA5B008B4976 /* NSData+Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Cache.h"; sourceTree = "<group>"; };
+		1DC69AA816D0AA5B008B4976 /* NSData+Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Cache.m"; sourceTree = "<group>"; };
+		1DC69AAA16D2A598008B4976 /* PDecl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDecl.h; sourceTree = "<group>"; };
+		1DC69AAB16D2AE7D008B4976 /* PDocumentPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDocumentPreviewViewController.h; sourceTree = "<group>"; };
+		1DC69AAC16D2AE7D008B4976 /* PDocumentPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDocumentPreviewViewController.m; sourceTree = "<group>"; };
+		1DC69AB116D2B609008B4976 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file; name = "zh-Hans"; path = "zh-Hans.lproj/MainStoryboard~iPad.storyboard"; sourceTree = "<group>"; };
+		1DC69AB716D2C36B008B4976 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file; name = "zh-Hans"; path = "zh-Hans.lproj/about.html"; sourceTree = "<group>"; };
+		1DC69AB916D2C3A5008B4976 /* pearl-id.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pearl-id.jpeg"; sourceTree = "<group>"; };
+		1DC69ABB16D2CBBA008B4976 /* PAboutPearlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAboutPearlViewController.h; sourceTree = "<group>"; };
+		1DC69ABC16D2CBBA008B4976 /* PAboutPearlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAboutPearlViewController.m; sourceTree = "<group>"; };
+		1DC69AC216D2D517008B4976 /* pictures.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pictures.png; sourceTree = "<group>"; };
+		1DC69AC316D2D517008B4976 /* pictures@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pictures@2x.png"; sourceTree = "<group>"; };
+		1DC69AC616D2D5AC008B4976 /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about.png; sourceTree = "<group>"; };
+		1DC69AC716D2D5AC008B4976 /* about@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about@2x.png"; sourceTree = "<group>"; };
+		1DC69ACA16D2D892008B4976 /* PPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPreferencesViewController.h; sourceTree = "<group>"; };
+		1DC69ACB16D2D892008B4976 /* PPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPreferencesViewController.m; sourceTree = "<group>"; };
+		1DC69ACD16D2D9AF008B4976 /* ui.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = ui.strings; sourceTree = "<group>"; };
+		1DC69ACF16D2D9CB008B4976 /* status.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = status.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				1D26981616C4282B0092EC2D /* libz.1.2.5.dylib */,
-				1D26981116C424F90092EC2D /* libz.dylib */,
 				1D1D6D5016C24B390093E239 /* UIKit.framework */,
 				1D1D6D5216C24B390093E239 /* Foundation.framework */,
 				1D1D6D5416C24B390093E239 /* CoreGraphics.framework */,
@@ -127,11 +158,20 @@
 		1D1D6D5616C24B390093E239 /* Pearl */ = {
 			isa = PBXGroup;
 			children = (
+				1DC69AB316D2B61B008B4976 /* i18n */,
 				1D1D6D5F16C24B390093E239 /* PAppDelegate.h */,
 				1D1D6D6016C24B390093E239 /* PAppDelegate.m */,
-				1D1D6D6816C24B390093E239 /* MainStoryboard.storyboard */,
+				1DC69AAA16D2A598008B4976 /* PDecl.h */,
 				1D2697D816C24E580092EC2D /* PInitialViewController.h */,
 				1D2697D916C24E580092EC2D /* PInitialViewController.m */,
+				1DC69ABB16D2CBBA008B4976 /* PAboutPearlViewController.h */,
+				1DC69ABC16D2CBBA008B4976 /* PAboutPearlViewController.m */,
+				1DC69AA416D0A9DD008B4976 /* PWorksListViewController.h */,
+				1DC69AA516D0A9DD008B4976 /* PWorksListViewController.m */,
+				1DC69AAB16D2AE7D008B4976 /* PDocumentPreviewViewController.h */,
+				1DC69AAC16D2AE7D008B4976 /* PDocumentPreviewViewController.m */,
+				1DC69ACA16D2D892008B4976 /* PPreferencesViewController.h */,
+				1DC69ACB16D2D892008B4976 /* PPreferencesViewController.m */,
 				1D2697DF16C251840092EC2D /* UIDevice+Resolutions.h */,
 				1D2697E016C251840092EC2D /* UIDevice+Resolutions.m */,
 				1D2697E516C39E730092EC2D /* UIViewController+Exit.h */,
@@ -140,6 +180,8 @@
 				1D26980F16C4230A0092EC2D /* UIImage+Cache.m */,
 				1D26981316C425150092EC2D /* NSData+Gzip.h */,
 				1D26981416C425150092EC2D /* NSData+Gzip.m */,
+				1DC69AA716D0AA5B008B4976 /* NSData+Cache.h */,
+				1DC69AA816D0AA5B008B4976 /* NSData+Cache.m */,
 				1D1D6D5716C24B390093E239 /* Supporting Files */,
 			);
 			path = Pearl;
@@ -148,6 +190,11 @@
 		1D1D6D5716C24B390093E239 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1DC69AB916D2C3A5008B4976 /* pearl-id.jpeg */,
+				1DC69AC216D2D517008B4976 /* pictures.png */,
+				1DC69AC316D2D517008B4976 /* pictures@2x.png */,
+				1DC69AC616D2D5AC008B4976 /* about.png */,
+				1DC69AC716D2D5AC008B4976 /* about@2x.png */,
 				1D1D6D5816C24B390093E239 /* Pearl-Info.plist */,
 				1D1D6D5916C24B390093E239 /* InfoPlist.strings */,
 				1D1D6D5C16C24B390093E239 /* main.m */,
@@ -175,6 +222,18 @@
 				1D1D6D8016C24BC60093E239 /* iTunesArtwork@2x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		1DC69AB316D2B61B008B4976 /* i18n */ = {
+			isa = PBXGroup;
+			children = (
+				1D1D6D6816C24B390093E239 /* MainStoryboard.storyboard */,
+				1DC69AB216D2B609008B4976 /* MainStoryboard~iPad.storyboard */,
+				1DC69ACD16D2D9AF008B4976 /* ui.strings */,
+				1DC69ACF16D2D9CB008B4976 /* status.strings */,
+				1DC69AB816D2C36B008B4976 /* about.html */,
+			);
+			name = i18n;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +305,15 @@
 				1D1D6D8C16C24BC60093E239 /* iTunesArtwork in Resources */,
 				1D1D6D8D16C24BC60093E239 /* iTunesArtwork@2x.png in Resources */,
 				1D2697DE16C2506D0092EC2D /* README in Resources */,
+				1DC69AB016D2B609008B4976 /* MainStoryboard~iPad.storyboard in Resources */,
+				1DC69AB616D2C36B008B4976 /* about.html in Resources */,
+				1DC69ABA16D2C3A5008B4976 /* pearl-id.jpeg in Resources */,
+				1DC69AC416D2D517008B4976 /* pictures.png in Resources */,
+				1DC69AC516D2D517008B4976 /* pictures@2x.png in Resources */,
+				1DC69AC816D2D5AC008B4976 /* about.png in Resources */,
+				1DC69AC916D2D5AC008B4976 /* about@2x.png in Resources */,
+				1DC69ACE16D2D9AF008B4976 /* ui.strings in Resources */,
+				1DC69AD016D2D9CB008B4976 /* status.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +331,11 @@
 				1D2697E716C39E730092EC2D /* UIViewController+Exit.m in Sources */,
 				1D26981016C4230A0092EC2D /* UIImage+Cache.m in Sources */,
 				1D26981516C425150092EC2D /* NSData+Gzip.m in Sources */,
+				1DC69AA616D0A9DD008B4976 /* PWorksListViewController.m in Sources */,
+				1DC69AA916D0AA5B008B4976 /* NSData+Cache.m in Sources */,
+				1DC69AAD16D2AE7D008B4976 /* PDocumentPreviewViewController.m in Sources */,
+				1DC69ABD16D2CBBA008B4976 /* PAboutPearlViewController.m in Sources */,
+				1DC69ACC16D2D893008B4976 /* PPreferencesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +345,6 @@
 		1D1D6D5916C24B390093E239 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1D1D6D5A16C24B390093E239 /* en */,
 				1D1D6D8E16C24D5B0093E239 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
@@ -281,9 +353,25 @@
 		1D1D6D6816C24B390093E239 /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1D1D6D6916C24B390093E239 /* en */,
+				1DB9563C16CBB25800E9C940 /* zh-Hans */,
 			);
 			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		1DC69AB216D2B609008B4976 /* MainStoryboard~iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DC69AB116D2B609008B4976 /* zh-Hans */,
+			);
+			name = "MainStoryboard~iPad.storyboard";
+			sourceTree = "<group>";
+		};
+		1DC69AB816D2C36B008B4976 /* about.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DC69AB716D2C36B008B4976 /* zh-Hans */,
+			);
+			name = about.html;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -314,7 +402,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -338,7 +426,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -351,7 +439,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pearl/Pearl-Prefix.pch";
 				INFOPLIST_FILE = "Pearl/Pearl-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -362,7 +452,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Pearl/Pearl-Prefix.pch";
 				INFOPLIST_FILE = "Pearl/Pearl-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

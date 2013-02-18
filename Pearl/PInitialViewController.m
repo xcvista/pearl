@@ -84,7 +84,7 @@
                 }
                 if (!self.crisis)
                     self.crisis = @{@"show": @YES,
-                               @"text": @"Max 有难！"};
+                                    @"text": @"Max 有难！"};
                 
                 dispatch_async(dispatch_get_main_queue(), ^
                 {
