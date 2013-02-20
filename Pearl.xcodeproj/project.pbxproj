@@ -49,7 +49,23 @@
 		1DC69ACE16D2D9AF008B4976 /* ui.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DC69ACD16D2D9AF008B4976 /* ui.strings */; };
 		1DC69AD016D2D9CB008B4976 /* status.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DC69ACF16D2D9CB008B4976 /* status.strings */; };
 		1DC69AD316D4A0AE008B4976 /* PSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC69AD216D4A0AE008B4976 /* PSplitViewController.m */; };
+		1DC69AD916D4A3E2008B4976 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1D6D5216C24B390093E239 /* Foundation.framework */; };
+		1DC69ADC16D4A3E2008B4976 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC69ADB16D4A3E2008B4976 /* main.m */; };
+		1DC69AE016D4A3E2008B4976 /* ImageSorter.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DC69ADF16D4A3E2008B4976 /* ImageSorter.1 */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1DC69AD616D4A3E1008B4976 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				1DC69AE016D4A3E2008B4976 /* ImageSorter.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1D1D6D4D16C24B390093E239 /* Pearl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pearl.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +127,10 @@
 		1DC69ACF16D2D9CB008B4976 /* status.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = status.strings; sourceTree = "<group>"; };
 		1DC69AD116D4A0AE008B4976 /* PSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSplitViewController.h; sourceTree = "<group>"; };
 		1DC69AD216D4A0AE008B4976 /* PSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSplitViewController.m; sourceTree = "<group>"; };
+		1DC69AD816D4A3E2008B4976 /* ImageSorter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ImageSorter; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DC69ADB16D4A3E2008B4976 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1DC69ADE16D4A3E2008B4976 /* ImageSorter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageSorter-Prefix.pch"; sourceTree = "<group>"; };
+		1DC69ADF16D4A3E2008B4976 /* ImageSorter.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ImageSorter.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +145,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1DC69AD516D4A3E1008B4976 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DC69AD916D4A3E2008B4976 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -134,6 +162,7 @@
 				1D2697DB16C250490092EC2D /* .gitignore */,
 				1D2697DD16C2506D0092EC2D /* README */,
 				1D1D6D5616C24B390093E239 /* Pearl */,
+				1DC69ADA16D4A3E2008B4976 /* ImageSorter */,
 				1D1D6D4F16C24B390093E239 /* Frameworks */,
 				1D1D6D4E16C24B390093E239 /* Products */,
 			);
@@ -143,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				1D1D6D4D16C24B390093E239 /* Pearl.app */,
+				1DC69AD816D4A3E2008B4976 /* ImageSorter */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -241,6 +271,24 @@
 			name = i18n;
 			sourceTree = "<group>";
 		};
+		1DC69ADA16D4A3E2008B4976 /* ImageSorter */ = {
+			isa = PBXGroup;
+			children = (
+				1DC69ADB16D4A3E2008B4976 /* main.m */,
+				1DC69ADF16D4A3E2008B4976 /* ImageSorter.1 */,
+				1DC69ADD16D4A3E2008B4976 /* Supporting Files */,
+			);
+			path = ImageSorter;
+			sourceTree = "<group>";
+		};
+		1DC69ADD16D4A3E2008B4976 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1DC69ADE16D4A3E2008B4976 /* ImageSorter-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -260,6 +308,23 @@
 			productName = Pearl;
 			productReference = 1D1D6D4D16C24B390093E239 /* Pearl.app */;
 			productType = "com.apple.product-type.application";
+		};
+		1DC69AD716D4A3E1008B4976 /* ImageSorter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DC69AE116D4A3E2008B4976 /* Build configuration list for PBXNativeTarget "ImageSorter" */;
+			buildPhases = (
+				1DC69AD416D4A3E1008B4976 /* Sources */,
+				1DC69AD516D4A3E1008B4976 /* Frameworks */,
+				1DC69AD616D4A3E1008B4976 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageSorter;
+			productName = ImageSorter;
+			productReference = 1DC69AD816D4A3E2008B4976 /* ImageSorter */;
+			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
@@ -285,6 +350,7 @@
 			projectRoot = "";
 			targets = (
 				1D1D6D4C16C24B390093E239 /* Pearl */,
+				1DC69AD716D4A3E1008B4976 /* ImageSorter */,
 			);
 		};
 /* End PBXProject section */
@@ -342,6 +408,14 @@
 				1DC69ABD16D2CBBA008B4976 /* PAboutPearlViewController.m in Sources */,
 				1DC69ACC16D2D893008B4976 /* PPreferencesViewController.m in Sources */,
 				1DC69AD316D4A0AE008B4976 /* PSplitViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC69AD416D4A3E1008B4976 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DC69ADC16D4A3E2008B4976 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +539,35 @@
 			};
 			name = Release;
 		};
+		1DC69AE216D4A3E2008B4976 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ImageSorter/ImageSorter-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1DC69AE316D4A3E2008B4976 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ImageSorter/ImageSorter-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -485,6 +588,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		1DC69AE116D4A3E2008B4976 /* Build configuration list for PBXNativeTarget "ImageSorter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DC69AE216D4A3E2008B4976 /* Debug */,
+				1DC69AE316D4A3E2008B4976 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
