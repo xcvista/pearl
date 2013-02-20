@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="pn9-5I-Uhk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="pn9-5I-Uhk">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -26,7 +26,9 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="832"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ZO-6s-v2G">
+                            <navigationBar contentMode="scaleToFill" id="3ZO-6s-v2G">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="珍珠" id="sxA-vZ-Fj3">
                                         <barButtonItem key="leftBarButtonItem" title="关于" id="uE3-T1-18g">
@@ -38,7 +40,9 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VpP-Jq-OgJ">
+                            <containerView contentMode="scaleToFill" id="VpP-Jq-OgJ">
+                                <rect key="frame" x="0.0" y="44" width="320" height="788"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="3h2-1z-82E" kind="embed" id="ZL3-vg-WNL"/>
@@ -46,15 +50,6 @@
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="3ZO-6s-v2G" firstAttribute="leading" secondItem="tHw-9u-RXt" secondAttribute="leading" type="default" id="0Xs-k1-jZQ"/>
-                            <constraint firstItem="VpP-Jq-OgJ" firstAttribute="bottom" secondItem="tHw-9u-RXt" secondAttribute="bottom" type="default" id="4kF-7T-Tgr"/>
-                            <constraint firstItem="VpP-Jq-OgJ" firstAttribute="top" secondItem="3ZO-6s-v2G" secondAttribute="bottom" type="default" id="9uk-9P-xiM"/>
-                            <constraint firstItem="3ZO-6s-v2G" firstAttribute="trailing" secondItem="tHw-9u-RXt" secondAttribute="trailing" type="default" id="Dg4-KM-NwP"/>
-                            <constraint firstItem="VpP-Jq-OgJ" firstAttribute="trailing" secondItem="tHw-9u-RXt" secondAttribute="trailing" type="default" id="Nus-8q-0WN"/>
-                            <constraint firstItem="VpP-Jq-OgJ" firstAttribute="leading" secondItem="tHw-9u-RXt" secondAttribute="leading" type="default" id="Vl5-Nu-Eog"/>
-                            <constraint firstItem="3ZO-6s-v2G" firstAttribute="top" secondItem="tHw-9u-RXt" secondAttribute="top" type="default" id="gBc-Bc-37S"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yd2-HZ-FTj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -71,10 +66,80 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
+                    <connections>
+                        <segue destination="47d-km-3w3" kind="relationship" relationship="viewControllers" id="xiD-o9-G5e"/>
+                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0rV-IJ-fch" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="901" y="-718"/>
+        </scene>
+        <!--Works List View Controller - 作品集-->
+        <scene sceneID="FDd-vL-dou">
+            <objects>
+                <tableViewController id="ITL-HR-dL4" customClass="PWorksListViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="UId-ri-XKq">
+                        <rect key="frame" x="0.0" y="64" width="320" height="675"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="ITL-HR-dL4" id="XSQ-to-07x"/>
+                            <outlet property="delegate" destination="ITL-HR-dL4" id="AhB-SU-cvE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="作品集" id="wyZ-qt-zo5"/>
+                    <connections>
+                        <segue destination="TfP-Gh-db3" kind="replace" identifier="preview" splitViewControllerTargetIndex="1" id="8Kn-tw-Wjb"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VJ4-0a-oVb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1958" y="-718"/>
+        </scene>
+        <!--Document Preview View Controller-->
+        <scene sceneID="lNI-QE-aI5">
+            <objects>
+                <viewController id="TfP-Gh-db3" customClass="PDocumentPreviewViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rmj-R9-mWW">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" id="h2C-0u-APr">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="56y-Bv-QQI">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="8W0-vI-u51">
+                                            <connections>
+                                                <action selector="actionClicked:" destination="TfP-Gh-db3" id="ihb-zg-5Gk"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView multipleTouchEnabled="YES" contentMode="scaleToFill" id="vCL-8n-w28">
+                                <rect key="frame" x="0.0" y="44" width="768" height="960"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="whiteLarge" id="ieN-bE-5MJ">
+                                <rect key="frame" x="366" y="505" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="actionButton" destination="8W0-vI-u51" id="yrb-1E-myj"/>
+                        <outlet property="activityIndicator" destination="ieN-bE-5MJ" id="SDL-mt-cIK"/>
+                        <outlet property="ipadTopBar" destination="56y-Bv-QQI" id="V6S-xO-0Uv"/>
+                        <outlet property="previewView" destination="vCL-8n-w28" id="12G-ON-KE4"/>
+                        <outlet property="webView" destination="vCL-8n-w28" id="Sul-IZ-6XT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8nP-g4-vld" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2477" y="-836"/>
         </scene>
         <!--About Pearl View Controller-->
         <scene sceneID="JcP-RY-HQB">
@@ -84,25 +149,20 @@
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6l-aQ-cnV">
+                            <navigationBar contentMode="scaleToFill" id="Y6l-aQ-cnV">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="关于珍珠" id="95a-uR-mf5"/>
                                 </items>
                             </navigationBar>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ATQ-eM-rKR">
+                            <webView contentMode="scaleToFill" id="ATQ-eM-rKR">
+                                <rect key="frame" x="0.0" y="44" width="768" height="960"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Y6l-aQ-cnV" firstAttribute="trailing" secondItem="SNw-hU-oz3" secondAttribute="trailing" type="default" id="3PQ-Io-LbM"/>
-                            <constraint firstItem="ATQ-eM-rKR" firstAttribute="trailing" secondItem="SNw-hU-oz3" secondAttribute="trailing" type="default" id="4e1-Ce-sJu"/>
-                            <constraint firstItem="ATQ-eM-rKR" firstAttribute="leading" secondItem="SNw-hU-oz3" secondAttribute="leading" type="default" id="ZVq-Gp-Qcz"/>
-                            <constraint firstItem="Y6l-aQ-cnV" firstAttribute="top" secondItem="SNw-hU-oz3" secondAttribute="top" type="default" id="bY6-Vf-zQ3"/>
-                            <constraint firstItem="Y6l-aQ-cnV" firstAttribute="leading" secondItem="SNw-hU-oz3" secondAttribute="leading" type="default" id="fTc-7i-cnK"/>
-                            <constraint firstItem="ATQ-eM-rKR" firstAttribute="top" secondItem="Y6l-aQ-cnV" secondAttribute="bottom" type="default" id="nKT-QQ-q8F"/>
-                            <constraint firstItem="ATQ-eM-rKR" firstAttribute="bottom" secondItem="SNw-hU-oz3" secondAttribute="bottom" type="default" id="nln-uF-Zx5"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="webView" destination="ATQ-eM-rKR" id="vnH-7k-PKB"/>
@@ -112,7 +172,57 @@
             </objects>
             <point key="canvasLocation" x="380" y="266"/>
         </scene>
+        <!--Navigation Controller - Item-->
+        <scene sceneID="3cR-YM-rxe">
+            <objects>
+                <navigationController id="47d-km-3w3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="GkD-Ui-DD2"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IYS-Jh-zVN">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ITL-HR-dL4" kind="relationship" relationship="rootViewController" id="K8p-KF-wgS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O9K-pL-IQS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1432" y="-718"/>
+        </scene>
     </scenes>
+    <classes>
+        <class className="PAboutPearlViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PAboutPearlViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="PDocumentPreviewViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PDocumentPreviewViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="actionClicked:"/>
+                <relationship kind="outlet" name="actionButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="ipadTopBar" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="previewView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="PWorksListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PWorksListViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="refresh:"/>
+            </relationships>
+        </class>
+        <class className="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="close:"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

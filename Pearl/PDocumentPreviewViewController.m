@@ -16,6 +16,7 @@
 @property (weak) IBOutlet UIBarButtonItem *actionButton;
 @property (weak) IBOutlet UIView *previewView;
 @property (weak) IBOutlet UIWebView *webView;
+@property (weak) IBOutlet UINavigationItem *ipadTopBar;
 
 @property NSURL *tempURL;
 
@@ -48,6 +49,7 @@
     NSURL *tempURL = [NSURL URLWithString:@"tmp"
                             relativeToURL:[NSURL URLWithString:[NSString stringWithFormat:@"file://localhost%@/", NSHomeDirectory()]]];
     self.navigationItem.title = self.data[@"name"];
+    self.ipadTopBar.title = self.data[@"name"];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSURL *sourceURL = [NSURL URLWithString:self.data[@"file"]];
         NSData *cachedData = [NSData cachedDataAtURL:sourceURL];
