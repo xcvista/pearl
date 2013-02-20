@@ -46,7 +46,7 @@
     [super viewWillAppear:animated];
     
     // Generate the temporary file which contained the inflated document.
-    NSURL *tempURL = [NSURL URLWithString:@"tmp"
+    NSURL *tempURL = [NSURL URLWithString:@"tmp/"
                             relativeToURL:[NSURL URLWithString:[NSString stringWithFormat:@"file://localhost%@/", NSHomeDirectory()]]];
     self.navigationItem.title = self.data[@"name"];
     self.ipadTopBar.title = self.data[@"name"];

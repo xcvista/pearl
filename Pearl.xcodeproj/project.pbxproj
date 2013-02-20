@@ -48,6 +48,7 @@
 		1DC69ACC16D2D893008B4976 /* PPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC69ACB16D2D892008B4976 /* PPreferencesViewController.m */; };
 		1DC69ACE16D2D9AF008B4976 /* ui.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DC69ACD16D2D9AF008B4976 /* ui.strings */; };
 		1DC69AD016D2D9CB008B4976 /* status.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DC69ACF16D2D9CB008B4976 /* status.strings */; };
+		1DC69AD316D4A0AE008B4976 /* PSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC69AD216D4A0AE008B4976 /* PSplitViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +109,8 @@
 		1DC69ACB16D2D892008B4976 /* PPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPreferencesViewController.m; sourceTree = "<group>"; };
 		1DC69ACD16D2D9AF008B4976 /* ui.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = ui.strings; sourceTree = "<group>"; };
 		1DC69ACF16D2D9CB008B4976 /* status.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = status.strings; sourceTree = "<group>"; };
+		1DC69AD116D4A0AE008B4976 /* PSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSplitViewController.h; sourceTree = "<group>"; };
+		1DC69AD216D4A0AE008B4976 /* PSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSplitViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +165,8 @@
 				1D1D6D5F16C24B390093E239 /* PAppDelegate.h */,
 				1D1D6D6016C24B390093E239 /* PAppDelegate.m */,
 				1DC69AAA16D2A598008B4976 /* PDecl.h */,
+				1DC69AD116D4A0AE008B4976 /* PSplitViewController.h */,
+				1DC69AD216D4A0AE008B4976 /* PSplitViewController.m */,
 				1D2697D816C24E580092EC2D /* PInitialViewController.h */,
 				1D2697D916C24E580092EC2D /* PInitialViewController.m */,
 				1DC69ABB16D2CBBA008B4976 /* PAboutPearlViewController.h */,
@@ -336,6 +341,7 @@
 				1DC69AAD16D2AE7D008B4976 /* PDocumentPreviewViewController.m in Sources */,
 				1DC69ABD16D2CBBA008B4976 /* PAboutPearlViewController.m in Sources */,
 				1DC69ACC16D2D893008B4976 /* PPreferencesViewController.m in Sources */,
+				1DC69AD316D4A0AE008B4976 /* PSplitViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,7 +447,7 @@
 				INFOPLIST_FILE = "Pearl/Pearl-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -454,7 +460,7 @@
 				INFOPLIST_FILE = "Pearl/Pearl-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
